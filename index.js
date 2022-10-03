@@ -1,5 +1,6 @@
 // packages
 import { Dimensions, PixelRatio } from 'react-native';
+import { isTablet } from '/isTablet';
 
 const iphone13ScreenRatio = 2532 / 1170
 
