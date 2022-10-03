@@ -1,8 +1,16 @@
 // packages
 import { Dimensions, PixelRatio } from 'react-native';
 
+const iphone13ScreenRatio = 2532 / 1170
+
 // Retrieve initial screen's width
-let screenWidth = Dimensions.get('window').width;
+let screenWidth = (() => {
+  if(isTablet()){
+    Dimensions.get('window').width / iphone13ScreenRatio
+  }
+
+  return Dimensions.get('window').width
+})();
 
 // Retrieve initial screen's height
 let screenHeight = Dimensions.get('window').height;
